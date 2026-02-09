@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
     try {
       // For direct email submission, Formspree uses the format: https://formspree.io/EMAIL
       // The previous '/f/' prefix is only for Form IDs.
-      const res = await fetch('https://formspree.io/adeboyeabimbola2001@gmail.com', {
+      const res = await fetch('https://formspree.io/f/mnjbnwvj', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
