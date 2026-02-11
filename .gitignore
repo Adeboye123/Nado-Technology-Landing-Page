@@ -24,4 +24,4 @@ yarn-error.log*
 Thumbs.db
 
 # Vite cache
-.vite/ 
+.vite/

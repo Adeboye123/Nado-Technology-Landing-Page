@@ -16,6 +16,67 @@
       html {
         scroll-behavior: smooth;
       }
+
+      /* Custom Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideRight {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .animate-slide-right {
+        animation: slideRight 0.8s ease-out forwards;
+        opacity: 0;
+      }
+
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-500 { animation-delay: 500ms; }
+      .delay-700 { animation-delay: 700ms; }
     </style>
     <script type="importmap">
     {
@@ -30,7 +91,7 @@
     </script>
   <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-white text-slate-900">
+  <body class="bg-white text-slate-900 overflow-x-hidden">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
